@@ -19,6 +19,8 @@ const Task = ({
     tasksClone[index].isDone = !isDone;
 
     setTasks([...tasksClone]);
+
+    localStorage.setItem("tasks", JSON.stringify(tasksClone));
   };
 
   return (
